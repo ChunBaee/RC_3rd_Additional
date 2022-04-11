@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dm_voicecall"
+        android:icon="@drawable/icon_call"
+        android:title="통화" />
+
+    <item
+        android:id="@+id/dm_videocall"
+        android:icon="@drawable/icon_video_call"
+        android:title="영상" />
+
+    <item
+        android:id="@+id/dm_alarm"
+        android:icon="@drawable/icon_bell"
+        android:title="알림" />
+
+    <item
+        android:id="@+id/dm_search"
+        android:icon="@drawable/icon_search"
+        android:title="검색하기" />
+
+</menu>

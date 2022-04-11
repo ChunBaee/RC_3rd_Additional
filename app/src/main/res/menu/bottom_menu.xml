@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_directMsg"
+        android:icon="@drawable/icon_discord"
+        android:title="다이렉트 메시지" />
+    <item
+        android:id="@+id/menu_friendList"
+        android:icon="@drawable/icon_friend"
+        android:title="친구" />
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/icon_search"
+        android:title="찾기" />
+
+    <item
+        android:id="@+id/menu_mention"
+        android:icon="@drawable/icon_at"
+        android:title="최근 멘션" />
+
+    <item
+        android:id="@+id/nul"
+        android:title="" />
+</menu>

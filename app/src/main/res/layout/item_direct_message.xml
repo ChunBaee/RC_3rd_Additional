@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/dm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DM"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="15sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:src="@drawable/icon_add_message"
+            android:layout_marginRight="15sp"
+            app:layout_constraintTop_toTopOf="@id/dm_title"
+            app:layout_constraintBottom_toBottomOf="@id/dm_title"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_search"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:background="@drawable/btn_dm_search"
+            android:layout_marginTop="15sp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintTop_toBottomOf="@id/dm_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대화 찾기 또는 시작하기"
+                android:textColor="#80808080"
+                android:textSize="15sp"
+                android:layout_marginLeft="10sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:layout_width="15sp"
+                android:layout_height="15sp"
+                android:src="@drawable/icon_search"
+                app:tint="#80808080"
+                android:layout_marginRight="10sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dm_friendList"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            app:layout_constraintWidth_percent="0.95"
+            app:layout_constraintTop_toBottomOf="@id/btn_search"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:listitem="@layout/item_dm_msg_list"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

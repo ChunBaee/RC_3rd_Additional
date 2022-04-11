@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/side_dm_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5sp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/chatlist_card"
+            tools:listitem="@layout/item_dm_list" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/chatlist_card"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            app:cardBackgroundColor="@color/discord_color_2"
+            app:cardCornerRadius="10sp"
+            app:layout_constraintLeft_toRightOf="@id/side_dm_list"
+            app:layout_constraintRight_toRightOf="parent">
+
+
+            <FrameLayout
+                android:id="@+id/dmList_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

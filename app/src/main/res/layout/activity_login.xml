@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_splash">
+
+        <ImageView
+            android:id="@+id/btn_fb_login"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:src="@drawable/img_fb_login"
+            android:layout_marginBottom="20sp"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintWidth_percent="0.8"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_google_login"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:src="@drawable/google_login"
+            android:layout_marginBottom="10sp"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintWidth_percent="0.8"
+            app:layout_constraintBottom_toTopOf="@id/btn_fb_login"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

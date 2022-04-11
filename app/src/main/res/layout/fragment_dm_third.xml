@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/discord_chatroom_background_color"
+        app:cardCornerRadius="5sp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:background="@color/discord_color_2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/icon_at"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginLeft="15sp"
+                    android:src="@drawable/icon_at"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/discord_chatroom_toolbar_icon_color" />
+
+                <TextView
+                    android:id="@+id/toolbar_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="이름"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@id/icon_at"
+                    app:layout_constraintLeft_toRightOf="@id/icon_at"
+                    app:layout_constraintTop_toTopOf="@id/icon_at" />
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginRight="20sp"
+                    android:src="@drawable/icon_three_dots"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/third_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="70sp"
+                android:layout_marginTop="2sp"
+                android:background="@color/discord_color_2"
+                app:itemIconTint="@color/discord_chatroom_toolbar_icon_color"
+                app:itemTextColor="@color/discord_chatroom_toolbar_icon_color"
+                app:labelVisibilityMode="labeled"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:menu="@menu/dm_menu" />
+
+            <LinearLayout
+                android:id="@+id/layout_invite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/third_navigation" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_margin="15sp"
+                    android:background="@drawable/background_msg_send" >
+
+                    <ImageView
+                        android:layout_width="15sp"
+                        android:layout_height="15sp"
+                        android:src="@drawable/icon_invite"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/discord_chatroom_toolbar_icon_color" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/txt_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="새로운 그룹 메시지 만들기"
+                    android:textSize="15sp"
+                    android:textColor="@color/discord_chatroom_toolbar_icon_color"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멤버 ㅡ"
+                android:textStyle="bold"
+                android:textColor="@color/discord_chatroom_toolbar_icon_color"
+                android:layout_marginLeft="15sp"
+                app:layout_constraintTop_toBottomOf="@id/layout_invite"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/txt_member"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:listitem="@layout/item_third_rv"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

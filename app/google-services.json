@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "345942039389",
+    "firebase_url": "https://rc-additional-3-default-rtdb.firebaseio.com",
+    "project_id": "rc-additional-3",
+    "storage_bucket": "rc-additional-3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345942039389:android:2d921139e04ba1973966b4",
+        "android_client_info": {
+          "package_name": "com.jcorp.exams"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345942039389-5vg2t4v1lg26278tc351hvv612k8k3qd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jcorp.exams",
+            "certificate_hash": "41342a194d7b2e339be97fc1ae8c1d68db4f826c"
+          }
+        },
+        {
+          "client_id": "345942039389-je0lkre25blpih25ah5gpu8ckuve486f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMghz_2_k3U-V6hRmQDrOXTgBfjm8mq2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345942039389-je0lkre25blpih25ah5gpu8ckuve486f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
